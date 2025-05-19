@@ -2,7 +2,7 @@
 
 ![Version](https://img.shields.io/badge/version-1.0-blue.svg)
 ![Chrome](https://img.shields.io/badge/Chrome-✓-green.svg)
-![Firefox](https://img.shields.io/badge/Firefox-En%20développement-orange.svg)
+![Firefox](https://img.shields.io/badge/Firefox-✓-green.svg)
 
 ## 📝 Description
 
@@ -17,6 +17,7 @@ DofusWeb est une extension de navigateur qui rassemble tous les liens utiles pou
 - 💫 Animations fluides
 - 🎨 Thème personnalisé
 - 🌐 Support multilingue (français)
+- 🔄 Compatible Chrome et Firefox
 
 ## 📋 Sites inclus
 
@@ -46,9 +47,29 @@ DofusWeb est une extension de navigateur qui rassemble tous les liens utiles pou
 4. Cliquez sur "Charger l'extension non empaquetée"
 5. Sélectionnez le dossier `DofusWeb`
 
-### Firefox (En développement)
+### Firefox
 
-*L'extension sera bientôt disponible sur Firefox*
+#### Installation depuis le code source
+
+1. Téléchargez ou clonez ce dépôt
+2. Installez Node.js si ce n'est pas déjà fait
+3. Ouvrez un terminal dans le dossier du projet
+4. Exécutez les commandes suivantes :
+   ```bash
+   npm install
+   npm run build:firefox
+   ```
+5. Ouvrez Firefox et accédez à `about:debugging#/runtime/this-firefox`
+6. Cliquez sur "Charger un module temporaire"
+7. Sélectionnez le fichier `manifest.json` dans le dossier `dist/firefox`
+
+#### Installation depuis le fichier XPI
+
+1. Téléchargez le fichier `.xpi` depuis la section Releases
+2. Ouvrez Firefox et accédez à `about:addons`
+3. Cliquez sur l'icône d'engrenage en haut à droite
+4. Sélectionnez "Installer un module depuis un fichier"
+5. Choisissez le fichier `.xpi` téléchargé
 
 ## 🛠️ Structure du projet
 
@@ -110,3 +131,23 @@ Pour toute question ou suggestion, n'hésitez pas à ouvrir une issue sur GitHub
 ---
 
 Made with ❤️ for the Dofus community 
+
+## 🛠️ Développement
+
+### Prérequis
+
+- Node.js (version 14 ou supérieure)
+- npm (généralement inclus avec Node.js)
+
+### Installation des dépendances
+
+```bash
+npm install
+```
+
+### Commandes disponibles
+
+- `npm run build:firefox` - Construit l'extension pour Firefox
+- `npm run build:chrome` - Construit l'extension pour Chrome
+- `npm run lint` - Vérifie le code source
+- `npm run sign` - Signe l'extension pour la publication (nécessite des clés API AMO) 

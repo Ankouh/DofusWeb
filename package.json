@@ -1,0 +1,16 @@
+{
+  "name": "dofusweb",
+  "version": "1.0.0",
+  "description": "Extension navigateur rassemblant les liens utiles Dofus",
+  "scripts": {
+    "build:firefox": "web-ext build --source-dir ./ --artifacts-dir ./dist/firefox",
+    "build:chrome": "web-ext build --source-dir ./ --artifacts-dir ./dist/chrome --target chromium",
+    "lint": "web-ext lint",
+    "sign": "web-ext sign --api-key $AMO_API_KEY --api-secret $AMO_API_SECRET"
+  },
+  "devDependencies": {
+    "web-ext": "^7.10.0"
+  },
+  "author": "DofusWeb",
+  "license": "MIT"
+} 
