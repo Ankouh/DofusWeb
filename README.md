@@ -1,6 +1,6 @@
 # DofusWeb - Extension Navigateur
 
-![Version](https://img.shields.io/badge/version-1.1-blue.svg)
+![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)
 ![Chrome](https://img.shields.io/badge/Chrome-✓-green.svg)
 ![Firefox](https://img.shields.io/badge/Firefox-✓-green.svg)
 
